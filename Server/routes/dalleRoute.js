@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import OpenAI from 'openai';
-
+import ImageModel from "../models/imageModel.js"
 dotenv.config();
 
 const router = express.Router();
@@ -27,10 +27,16 @@ router.route('/').post(async (req, res) => {
             prompt,
             n: 1,
             size: "1024x1024",
-          });
-          
+        });
 
-        res.status(200).json(response.data[0].url);
+        const newImage = new ImageModel({
+            prompt,
+            imgLink : response.data[0].url
+        });
+
+        const createdImage = await newImage.save();
+
+        res.status(200).json(createdImage);
 
     } catch (error) {
         console.error('Error generating image:', error);

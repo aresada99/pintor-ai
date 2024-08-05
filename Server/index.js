@@ -1,9 +1,19 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import mongoose from 'mongoose'
 import cors from 'cors'
 import dalleRoutes from './routes/dalleRoute.js'
 
 dotenv.config();
+
+// MONGO DB CONNECTION
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => {
+        console.log("Connected to database successfuly");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 
 // EXPRESS INIT
 const app = express();
