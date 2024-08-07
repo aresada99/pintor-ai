@@ -44,12 +44,11 @@ const Home = () => {
         
         const link = document.createElement('a');
         link.href = blobUrl;
-        link.download = 'generated-image.png'; // İndirilecek dosyanın adı
+        link.download = 'generated-image.png'; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
       
-        // Blob URL'sini serbest bırak
         window.URL.revokeObjectURL(blobUrl);
     };
 

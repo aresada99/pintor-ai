@@ -53,3 +53,101 @@
 .nav-routes a{
     text-decoration: none;
 }
+
+
+
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .content{
+    width: 80%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery h1{
+    margin: 0;
+}
+
+.gallery h2{
+    color: rgba(0, 0, 0, 0.39);
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 100px;
+}
+
+.card {
+    background-color: #f5f5f5;
+    width: 536px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+.card p{
+    padding: 0 20px;
+}
+
+.card img{
+    width: 512px;
+    margin-top: 12px;
+}
+
+
+.btns-div{
+    display: flex;
+    gap: 10px;
+}
+
+.btns-div button{
+    background-color: rgb(0, 160, 0);
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    margin-top: 12px;
+    padding: 12px 36px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.btns-div .download-btn{
+    border-radius: 5px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.btns-div .download-btn:hover{
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+}
+
+.btns-div .original-btn{
+    border-radius: 5px;
+    background-color: rgb(67, 0, 143);
+    cursor: pointer;
+}
+
+.btns-div .original-btn:hover{
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(67, 0, 143);
+    outline: 1px solid rgb(67, 0, 143);
+}
